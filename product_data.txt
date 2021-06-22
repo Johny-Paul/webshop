@@ -1,0 +1,28 @@
+1. preuzeti sve cathNo favorita
+2. za svaki cathNo favorita pretražiti kolekciju sa proizvodima 
+3. one stavke koji zadovoljavaju kriterij pretrage preuzimaju se u polje favorites u storeu i prikazuju u browseru
+
+
+{
+            availability: true,
+            buyerComments: "Excellent product!",
+            buyerGrade: 4.5,
+            cathNo: "1938094859",
+            discount: 0,
+            image_url: "https://www.links.hr/content/images/thumbs/009/0099091_prijenosno-racunalo-lenovo-v15-82c500gjsc-core-i3-10305g1-8gb-256gb-ssd-hd-graphics-15-6-led-fhd-wi.jpg",
+            name: "Lenovo V15",
+            price: 3999.99,
+            shippingCost: 0,
+            specs:{
+                bluetooth: true,
+                color: "silver",
+                cpu: "Intel Core i3 10gen",
+                memory: "256 GB SSD",
+                os: "Windows 10",
+                ram: "8GB",
+                screen: "15.6inch FHD",
+                warehouseStatus: 15,
+                warranty: "36 months"
+            }
+
+        },

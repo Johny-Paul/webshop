@@ -1,0 +1,195 @@
+.nav-link {
+  margin-right: 3em;
+  color: white;
+  font-weight: bold;
+}
+
+.promo {
+  max-width: 90%;
+  max-height: auto;
+}
+
+#nav {
+  padding: 30px;
+  background-color: #3791C2;
+}
+
+#nav a.router-link-exact-active {
+  color: #c59838;
+}
+
+.card-img {
+  max-width: 17rem;
+}
+
+.cardImage {
+  height: 100%;
+  max-width: auto;
+  margin: auto;
+}
+
+.productCardComponent {
+  margin: 10px;
+}
+
+.featuredProducts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 1;
+}
+
+.card-img-container {
+  position: relative;
+  width: 95%;
+  height: 40%;
+  overflow: hidden;
+}
+
+.sidebar {
+  text-align: left;
+}
+
+#mySideNav a {
+  position: fixed;
+  right: -100px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding: 10px;
+  width: 160px;
+  text-decoration: none;
+  font-size: 0.7em;
+  color: white;
+  border-radius: 5px 0 0 5px;
+  z-index: 2;
+}
+
+#mySideNav img {
+  max-width: 50px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#mySideNav span {
+  padding-left: 10px;
+}
+
+#mySideNav a:hover {
+  right: 0;
+}
+
+.compareProducts {
+  top: 18rem;
+  background-color: #3791C2;
+}
+
+.favorites {
+  top: 24rem;
+  background-color: #3791C2;
+}
+
+.shoppingCart {
+  top: 30rem;
+  background-color: #3791C2;
+}
+
+.selProdCardImg {
+  -o-object-fit: contain !important;
+     object-fit: contain !important;
+  max-width: 100%;
+}
+
+.collapseButton {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .collapseButton {
+    display: inline-block !important;
+  }
+  .collapsible {
+    display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .collapsible {
+    display: inline-block !important;
+  }
+}
+
+.inputNumber {
+  max-width: 3em;
+}
+
+.myContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.notificationWishlist {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: #e6b000;
+  color: white;
+}
+
+.showNotification {
+  display: block;
+  opacity: 1;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: myFooterModal;
+          animation-name: myFooterModal;
+}
+
+@-webkit-keyframes myFooterModal {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes myFooterModal {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.closeNotificationFix {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

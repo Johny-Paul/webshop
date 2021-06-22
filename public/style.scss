@@ -1,0 +1,167 @@
+.nav-link {
+    margin-right: 3em;
+    color: white;
+    font-weight: bold;
+}
+
+.promo {
+    max-width: 90%;
+    max-height: auto;
+}
+
+#nav {
+    padding: 30px;
+    background-color: #3791C2;
+    a {
+      &.router-link-exact-active {
+        color: #c59838;
+      }
+    }
+  }
+
+  
+
+  .card-img {
+    max-width: 17rem;
+  }
+
+  .cardImage {
+    height: 100%;
+    max-width: auto;
+    margin: auto;
+  }
+
+  .productCardComponent {
+    margin: 10px;  
+  }
+
+  .featuredProducts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  .card-img-container {
+    position: relative;
+    width: 95%;
+    height: 40%;
+    overflow: hidden;
+  }
+
+  .sidebar {
+    text-align: left;
+  }
+
+  #mySideNav a {
+    position: fixed;
+    right: -100px;
+    transition: 0.3s;
+    padding: 10px;
+    width: 160px;
+    text-decoration: none;
+    font-size: 0.7em;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    z-index: 2;
+  }
+
+  #mySideNav img {
+    max-width: 50px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #mySideNav span {
+    padding-left: 10px;
+  }
+
+  #mySideNav a:hover {
+    right: 0;
+  }
+
+  .compareProducts {
+    top: 18rem;
+    background-color: #3791C2;
+  }
+
+  .favorites {
+    top: 24rem;
+    background-color: #3791C2;
+  }
+
+  .shoppingCart {
+    top: 30rem;
+    background-color: #3791C2;
+  }
+
+  .selProdCardImg {
+    object-fit: contain !important;
+    max-width: 100%;
+    }
+
+  .collapseButton {
+    display: none;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .collapseButton {
+      display: inline-block !important;
+    }
+    .collapsible {
+      display: none;
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (min-width: 769px) {
+    .collapsible {
+      display: inline-block !important;
+    }
+  }
+
+  .inputNumber {
+    max-width: 3em;
+  }
+
+  .myContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+ 
+  .notificationWishlist {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: rgb(230, 176, 0);
+    color: white;
+  }
+
+  .showNotification {
+    display: block;
+    opacity: 1;
+    animation-duration: 3s;
+    animation-name: myFooterModal;
+  }
+
+  @keyframes myFooterModal {
+    from {
+      opacity: 1;
+      display: block;
+    }
+
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  .closeNotificationFix{
+    display: none;
+  }
