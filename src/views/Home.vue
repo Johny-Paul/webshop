@@ -4,7 +4,7 @@
     <h2>Akcijska ponuda</h2>
     
     <div class="featuredProducts">
-        <ProductCard class="productCardComponent" v-bind:key="product.cathNo" v-for="product of this.productsToShow" :productData="product"/>
+        <product-card class="productCardComponent" v-bind:key="product.cathNo" v-for="product of this.productsToShow" :productData="product"/>
     </div>
 
     
@@ -15,11 +15,13 @@
 // @ is an alias to /src
 import ProductCard from '@/components/ProductCard.vue'
 import store from '../store.js'
+//import vSelect from 'vue-select'
 
 export default {
   name: 'Home',
   components: {
-    ProductCard
+    'product-card': ProductCard,
+    //'v-select': vSelect
   },
   data() {
     return store;

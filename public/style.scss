@@ -143,6 +143,8 @@
     color: white;
   }
 
+  $colorPrimary: rgb(230, 176, 0);
+
   .showNotification {
     display: block;
     opacity: 1;
@@ -164,4 +166,46 @@
 
   .closeNotificationFix{
     display: none;
+  }
+
+  
+  .step-wrapper {
+    display: flex;
+  
+  }
+  
+  .step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    font-family: Arial;
+    color: rgb(230, 176, 0);
+    background-color: white;
+    
+    &:first-child {
+      color: white;
+      background-color: rgb(230, 176, 0);
+      
+      &:after {
+        background-color: rgb(230, 176, 0);
+      }
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      left: calc(100% - 15px);
+      top: 50%;
+      margin-top: -14px;
+      background-color: white;
+      transform: rotate(45deg);
+      box-shadow: 1px -1px 0 0 #ccc;
+      z-index: 5;
+    }
   }

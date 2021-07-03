@@ -16,13 +16,13 @@
   <div class="sidebar" id="mySideNav">
     <router-link to="compareProducts" class="compareProducts"><img src="../src/assets/sidebar/compare_products.svg" alt="compare products icon"><span>Compare</span></router-link>
     <router-link to="favorites" class="favorites"><img src="../src/assets/sidebar/favorites.svg" alt="favorites icon"><span>Wish list</span></router-link>
-    <router-link to="shoppingCart" class="shoppingCart"><img src="../src/assets/sidebar/shopping_cart.svg" alt="shopping cart icon"><span>Shopping Cart</span></router-link>
+    <router-link to="cart" class="shoppingCart"><img src="../src/assets/sidebar/shopping_cart.svg" alt="shopping cart icon"><span>Shopping Cart</span></router-link>
   </div>
 
   <router-view/>
 
   <div class="notificationWishlist" id="openNotification">
-      <h5>Product added to your wish list!</h5>
+      <h5>Product added to your <span v-if="this.favoritesButton">wish list</span> <span v-if="this.cartButton">shopping cart</span>!</h5>
   </div>
 </template>
 
@@ -57,7 +57,8 @@ export default {
               if(user) {
                 this.user.userUID = user.uid;
                 db.collection("users").doc(user.uid).set( {
-                  favorites: []
+                  favorites: [],
+                  cart: {}
                 })
               }
             })

@@ -7,6 +7,8 @@ export default {
         user,
         informatics,
         favorites,
-        productsToShow: {}
+        productsToShow: {},
+        favoritesButton: false,
+        cartButton: false,
     };
 

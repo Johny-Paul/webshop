@@ -23,6 +23,29 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "favorites" */ '../views/Favorites.vue')
   },
+  {
+    path: '/cart',
+    name: 'Cart',
+    component: () => import(/* webpackChunkName: "cart" */ '../views/Cart.vue')
+  },
+  {
+    path: '/checkout/:userData',
+    props: true,
+    name: 'Checkout',
+    component: () => import(/* webpackChunkName: "checkout" */ '../views/Checkout.vue')
+  },
+  {
+    path: '/checkout/:userData/payment',
+    props: true,
+    name: 'Payment',
+    component: () => import(/* webpackChunkName: "payment" */ '../views/Payment.vue')
+  },
+  {
+    path: '/checkout/:userData/payment/continue',
+    props: true,
+    name: 'Continue',
+    component: () => import(/* webpackChunkName: "continue" */ '../views/Continue.vue')
+  }
 ]
 
 const router = createRouter({

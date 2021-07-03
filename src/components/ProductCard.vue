@@ -14,10 +14,10 @@
                 <img src="../assets/compare_products.svg" style="max-width: 2.5em" alt="compare products image">
               </div>
               <div class="col">
-                <img src="../assets/shopping_cart.svg" style="max-width: 8em" alt="compare products image">
+                <img type="button" @click="addToCart()" src="../assets/shopping_cart.svg" style="max-width: 8em" alt="shopping cart image">
               </div>
               <div class="col px-0">
-                <button type="button" @click="addToFavorites()"><img src="../assets/favorites.svg" style="max-width: 2.5em" alt="compare products image"></button>
+                <button type="button" @click="addToFavorites()"><img src="../assets/favorites.svg" style="max-width: 2.5em" alt="favorites button image"></button>
               </div>
             </div>
         </div>
@@ -44,9 +44,28 @@ export default {
             `${this.productData.cathNo}`
           )
         });
+        this.favoritesButton = true;
         console.log('Showing modal notification:')
         document.getElementById('openNotification').classList.add('showNotification');
         setTimeout(function() {document.getElementById('openNotification').classList.remove('showNotification')}, 2000)
+        setTimeout(() => {
+          this.favoritesButton = false;
+        }, 2000);
+    },
+    addToCart() {
+      db.collection("users").doc(`${this.user.userUID}`).update({
+        ['cart.'+`${this.productData.cathNo}`]: {quantity: 1}
+      });
+        this.cartButton = true;
+        console.log('Showing modal notification:')
+        document.getElementById('openNotification').classList.add('showNotification');
+        setTimeout(function() {document.getElementById('openNotification').classList.remove('showNotification')}, 2000)
+        setTimeout(() => {
+          this.cartButton = false;
+        }, 2000);
+    },
+    goToCheckout() {
+      this.$router.push()
     }   
   }
 }
